@@ -1,0 +1,767 @@
+{
+  "datasets": [
+    {
+      "name": "92628fe1",
+      "displayName": "rma_county_yields_report_399",
+      "queryLines": [
+        "SELECT * FROM workspace.default.rma_county_yields_report_399"
+      ]
+    },
+    {
+      "name": "67b9fcb6",
+      "displayName": "noaa_ghcn_daily",
+      "queryLines": [
+        "SELECT * FROM rearc_daily_weather_observations_noaa.esg_noaa_ghcn.noaa_ghcn_daily"
+      ]
+    },
+    {
+      "name": "1d0feadc",
+      "displayName": "corn_weather_state_year",
+      "queryLines": [
+        "SELECT * FROM workspace.number_one_awesome_team.corn_weather_state_year"
+      ],
+      "columns": [
+        {
+          "displayName": "Correlation: Yield vs Max Temp",
+          "description": "Correlation between average yield and max temperature.",
+          "expression": "CORR(`avg_yield`, `avg_temp_max`)"
+        },
+        {
+          "displayName": "Correlation: Yield vs Min Temp",
+          "description": "Correlation between average yield and min temperature.",
+          "expression": "CORR(`avg_yield`, `avg_temp_min`)"
+        },
+        {
+          "displayName": "Correlation: Yield vs Precipitation",
+          "description": "Correlation between average yield and total precipitation.",
+          "expression": "CORR(`avg_yield`, `total_precip`)"
+        },
+        {
+          "displayName": "Correlation: Yield vs Snowfall",
+          "description": "Correlation between average yield and average snowfall.",
+          "expression": "CORR(`avg_yield`, `avg_snowfall`)"
+        },
+        {
+          "displayName": "Correlation: Yield vs Snow Depth",
+          "description": "Correlation between average yield and average snow depth.",
+          "expression": "CORR(`avg_yield`, `avg_snow_depth`)"
+        },
+        {
+          "displayName": "state_full_name",
+          "description": "Maps state postal codes to full state names for US states.",
+          "expression": "CASE UPPER(TRIM(`state`)) WHEN 'AL' THEN 'Alabama' WHEN 'AK' THEN 'Alaska' WHEN 'AZ' THEN 'Arizona' WHEN 'AR' THEN 'Arkansas' WHEN 'CA' THEN 'California' WHEN 'CO' THEN 'Colorado' WHEN 'CT' THEN 'Connecticut' WHEN 'DE' THEN 'Delaware' WHEN 'FL' THEN 'Florida' WHEN 'GA' THEN 'Georgia' WHEN 'HI' THEN 'Hawaii' WHEN 'ID' THEN 'Idaho' WHEN 'IL' THEN 'Illinois' WHEN 'IN' THEN 'Indiana' WHEN 'IA' THEN 'Iowa' WHEN 'KS' THEN 'Kansas' WHEN 'KY' THEN 'Kentucky' WHEN 'LA' THEN 'Louisiana' WHEN 'ME' THEN 'Maine' WHEN 'MD' THEN 'Maryland' WHEN 'MA' THEN 'Massachusetts' WHEN 'MI' THEN 'Michigan' WHEN 'MN' THEN 'Minnesota' WHEN 'MS' THEN 'Mississippi' WHEN 'MO' THEN 'Missouri' WHEN 'MT' THEN 'Montana' WHEN 'NE' THEN 'Nebraska' WHEN 'NV' THEN 'Nevada' WHEN 'NH' THEN 'New Hampshire' WHEN 'NJ' THEN 'New Jersey' WHEN 'NM' THEN 'New Mexico' WHEN 'NY' THEN 'New York' WHEN 'NC' THEN 'North Carolina' WHEN 'ND' THEN 'North Dakota' WHEN 'OH' THEN 'Ohio' WHEN 'OK' THEN 'Oklahoma' WHEN 'OR' THEN 'Oregon' WHEN 'PA' THEN 'Pennsylvania' WHEN 'RI' THEN 'Rhode Island' WHEN 'SC' THEN 'South Carolina' WHEN 'SD' THEN 'South Dakota' WHEN 'TN' THEN 'Tennessee' WHEN 'TX' THEN 'Texas' WHEN 'UT' THEN 'Utah' WHEN 'VT' THEN 'Vermont' WHEN 'VA' THEN 'Virginia' WHEN 'WA' THEN 'Washington' WHEN 'WV' THEN 'West Virginia' WHEN 'WI' THEN 'Wisconsin' WHEN 'WY' THEN 'Wyoming' ELSE NULL END"
+        }
+      ]
+    },
+    {
+      "name": "7f154cd1",
+      "displayName": "soybean_weather_state_year",
+      "queryLines": [
+        "SELECT * FROM workspace.number_one_awesome_team.soybean_weather_state_year"
+      ]
+    },
+    {
+      "name": "9aa4e81b",
+      "displayName": "weather_state_year",
+      "queryLines": [
+        "SELECT * FROM workspace.number_one_awesome_team.weather_state_year"
+      ]
+    },
+    {
+      "name": "2443af08",
+      "displayName": "weather_us_daily",
+      "queryLines": [
+        "SELECT * FROM workspace.number_one_awesome_team.weather_us_daily"
+      ]
+    },
+    {
+      "name": "6e6ba30a",
+      "displayName": "weather_us_yearly",
+      "queryLines": [
+        "SELECT * FROM workspace.number_one_awesome_team.weather_us_yearly"
+      ]
+    },
+    {
+      "name": "725ec845",
+      "displayName": "weather_us_yearly_state",
+      "queryLines": [
+        "SELECT * FROM workspace.number_one_awesome_team.weather_us_yearly_state"
+      ]
+    },
+    {
+      "name": "dbf9d943",
+      "displayName": "weather_yearly",
+      "queryLines": [
+        "SELECT * FROM workspace.number_one_awesome_team.weather_yearly"
+      ]
+    },
+    {
+      "name": "7b095df4",
+      "displayName": "yield_corn_state_year",
+      "queryLines": [
+        "SELECT * FROM workspace.number_one_awesome_team.yield_corn_state_year"
+      ]
+    },
+    {
+      "name": "d2eb69f3",
+      "displayName": "yield_soybean_state_year",
+      "queryLines": [
+        "SELECT * FROM workspace.number_one_awesome_team.yield_soybean_state_year"
+      ]
+    },
+    {
+      "name": "491d0a65",
+      "displayName": "yield_state_year",
+      "queryLines": [
+        "SELECT * FROM workspace.number_one_awesome_team.yield_state_year"
+      ]
+    },
+    {
+      "name": "80d61159",
+      "displayName": "yield_state_year_clean",
+      "queryLines": [
+        "SELECT * FROM workspace.number_one_awesome_team.yield_state_year_clean"
+      ]
+    },
+    {
+      "name": "5923bbc5",
+      "displayName": "yield_state_year_corn",
+      "queryLines": [
+        "SELECT * FROM workspace.number_one_awesome_team.yield_state_year_corn"
+      ]
+    },
+    {
+      "name": "8e48febc",
+      "displayName": "yield_weather_state_year",
+      "queryLines": [
+        "SELECT * FROM workspace.number_one_awesome_team.yield_weather_state_year"
+      ]
+    },
+    {
+      "name": "b2f663e4",
+      "displayName": "yield_weather_state_year_corn",
+      "queryLines": [
+        "SELECT * FROM workspace.number_one_awesome_team.yield_weather_state_year_corn"
+      ]
+    },
+    {
+      "name": "4a081c8c",
+      "displayName": "Yield-Weather Correlation Summary",
+      "queryLines": [
+        "SELECT 'Max Temp' AS weather_feature, -0.071 AS correlation UNION ALL\n",
+        "SELECT 'Min Temp', 0.094 UNION ALL\n",
+        "SELECT 'Precipitation', -0.068 UNION ALL\n",
+        "SELECT 'Snowfall', -0.149 UNION ALL\n",
+        "SELECT 'Snow Depth', -0.330"
+      ]
+    },
+    {
+      "name": "befd8626",
+      "displayName": "Yield-Weather Correlation Absolute Summary",
+      "queryLines": [
+        "SELECT 'Max Temp' AS weather_feature, ABS(-0.071) AS correlation UNION ALL\n",
+        "SELECT 'Min Temp', ABS(0.094) UNION ALL\n",
+        "SELECT 'Precipitation', ABS(-0.068) UNION ALL\n",
+        "SELECT 'Snowfall', ABS(-0.149) UNION ALL\n",
+        "SELECT 'Snow Depth', ABS(-0.330)"
+      ]
+    },
+    {
+      "name": "011a74b5",
+      "displayName": "Yield-Weather Absolute Correlation by Crop",
+      "queryLines": [
+        "WITH corn AS (\n",
+        "  SELECT w.state, w.year, w.avg_temp_max, w.avg_temp_min, w.avg_precip, w.avg_snowfall, w.avg_snow_depth, y.avg_yield\n",
+        "  FROM workspace.number_one_awesome_team.weather_state_year w\n",
+        "  JOIN workspace.number_one_awesome_team.yield_state_year_clean y\n",
+        "    ON w.state = y.state AND w.year = y.year\n",
+        "),\n",
+        "soybean AS (\n",
+        "  SELECT w.state, w.year, w.avg_temp_max, w.avg_temp_min, w.avg_precip, w.avg_snowfall, w.avg_snow_depth, y.avg_yield\n",
+        "  FROM workspace.number_one_awesome_team.weather_state_year w\n",
+        "  JOIN workspace.number_one_awesome_team.yield_soybean_state_year y\n",
+        "    ON w.state = y.state AND w.year = y.year\n",
+        "),\n",
+        "correlations AS (\n",
+        "  SELECT 'Corn' AS crop, 'Max Temp' AS weather_feature, ABS(CORR(avg_yield, avg_temp_max)) AS abs_corr FROM corn UNION ALL\n",
+        "  SELECT 'Corn', 'Min Temp', ABS(CORR(avg_yield, avg_temp_min)) FROM corn UNION ALL\n",
+        "  SELECT 'Corn', 'Precipitation', ABS(CORR(avg_yield, avg_precip)) FROM corn UNION ALL\n",
+        "  SELECT 'Corn', 'Snowfall', ABS(CORR(avg_yield, avg_snowfall)) FROM corn UNION ALL\n",
+        "  SELECT 'Corn', 'Snow Depth', ABS(CORR(avg_yield, avg_snow_depth)) FROM corn UNION ALL\n",
+        "  SELECT 'Soybean', 'Max Temp', ABS(CORR(avg_yield, avg_temp_max)) FROM soybean UNION ALL\n",
+        "  SELECT 'Soybean', 'Min Temp', ABS(CORR(avg_yield, avg_temp_min)) FROM soybean UNION ALL\n",
+        "  SELECT 'Soybean', 'Precipitation', ABS(CORR(avg_yield, avg_precip)) FROM soybean UNION ALL\n",
+        "  SELECT 'Soybean', 'Snowfall', ABS(CORR(avg_yield, avg_snowfall)) FROM soybean UNION ALL\n",
+        "  SELECT 'Soybean', 'Snow Depth', ABS(CORR(avg_yield, avg_snow_depth)) FROM soybean\n",
+        ")\n",
+        "SELECT * FROM correlations"
+      ]
+    },
+    {
+      "name": "4176091b",
+      "displayName": "Corn Yield Regression Results",
+      "queryLines": [
+        "SELECT state, year, avg_yield, predicted_yield, residual, avg_temp_max, avg_temp_min, avg_precip, avg_snowfall, avg_snow_depth FROM workspace.number_one_awesome_team.corn_yield_regression_results"
+      ]
+    },
+    {
+      "name": "cea48748",
+      "displayName": "corn_anomalies",
+      "queryLines": [
+        "SELECT * FROM workspace.default.corn_anomalies"
+      ]
+    },
+    {
+      "name": "4e7c2007",
+      "displayName": "soybean_anomalies",
+      "queryLines": [
+        "SELECT * FROM workspace.default.soybean_anomalies"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "fafb756b",
+      "displayName": "Overview",
+      "layout": [
+        {
+          "widget": {
+            "name": "a9e0cdda",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "1d0feadc",
+                  "fields": [
+                    {
+                      "name": "avg_temp_max",
+                      "expression": "`avg_temp_max`"
+                    },
+                    {
+                      "name": "state_full_name",
+                      "expression": "`state_full_name`"
+                    }
+                  ],
+                  "filters": [
+                    {
+                      "expression": "UPPER(TRIM(`state`)) IN ('AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY')"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 1,
+              "frame": {
+                "title": "Map: Maximum Temperature by State vs. Average Yield",
+                "showTitle": true
+              },
+              "widgetType": "choropleth-map",
+              "encodings": {
+                "color": {
+                  "fieldName": "avg_temp_max",
+                  "displayName": "Average maximum temperature",
+                  "scale": {
+                    "type": "quantitative",
+                    "colorRamp": {
+                      "mode": "scheme",
+                      "scheme": "reds"
+                    }
+                  }
+                },
+                "region": {
+                  "regionType": "mapbox-v4-admin",
+                  "admin0": {
+                    "type": "value",
+                    "value": "United States",
+                    "geographicRole": "admin0-name"
+                  },
+                  "admin1": {
+                    "fieldName": "state_full_name",
+                    "type": "field",
+                    "geographicRole": "admin1-name"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 8,
+            "width": 12,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "grouped_abs_corr_bar_chart_weather_state_year",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "011a74b5",
+                  "fields": [
+                    {
+                      "name": "crop",
+                      "expression": "`crop`"
+                    },
+                    {
+                      "name": "weather_feature",
+                      "expression": "`weather_feature`"
+                    },
+                    {
+                      "name": "abs_corr",
+                      "expression": "`abs_corr`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "title": "Grouped Absolute Correlation: Yield vs Weather Features (Corn vs Soybean)",
+                "showTitle": true
+              },
+              "mark": {
+                "layout": "group"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "weather_feature",
+                  "displayName": "Weather Feature",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "natural-order"
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "abs_corr",
+                  "format": {
+                    "type": "number-plain",
+                    "decimalPlaces": {
+                      "type": "exact",
+                      "places": 3
+                    },
+                    "abbreviation": "none"
+                  },
+                  "displayName": "Absolute Correlation (|r|)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "crop",
+                  "legend": {
+                    "position": "right"
+                  },
+                  "displayName": "Crop Type",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 12,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "5ad2afbf",
+            "multilineTextboxSpec": {
+              "lines": [
+                "<span style=\"font-size: 18px;\">The chart above illustrates the correlation between different types of weather and crop yield for soybeans and corn. The data shows that temperature is the most important factor in determing crop yield. Below is a map of average temperatures by state. Based on this we suggest corteva said more crops to the states with moderate temperatures (light red on map). </span>"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 6,
+            "width": 12,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "corn_yield_regression_scatter",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "4176091b",
+                  "fields": [
+                    {
+                      "name": "state",
+                      "expression": "`state`"
+                    },
+                    {
+                      "name": "predicted_yield",
+                      "expression": "`predicted_yield`"
+                    },
+                    {
+                      "name": "avg_yield",
+                      "expression": "`avg_yield`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "title": "Corn Yield: Actual vs Predicted",
+                "showTitle": true
+              },
+              "widgetType": "scatter",
+              "encodings": {
+                "x": {
+                  "fieldName": "predicted_yield",
+                  "displayName": "Predicted Yield",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg_yield",
+                  "displayName": "Actual Yield",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "state",
+                  "legend": {
+                    "position": "right"
+                  },
+                  "displayName": "State",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 14,
+            "width": 12,
+            "height": 8
+          }
+        },
+        {
+          "widget": {
+            "name": "corn_yield_residuals_sorted",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "4176091b",
+                  "fields": [
+                    {
+                      "name": "state",
+                      "expression": "`state`"
+                    },
+                    {
+                      "name": "year",
+                      "expression": "`year`"
+                    },
+                    {
+                      "name": "avg_yield",
+                      "expression": "`avg_yield`"
+                    },
+                    {
+                      "name": "predicted_yield",
+                      "expression": "`predicted_yield`"
+                    },
+                    {
+                      "name": "residual",
+                      "expression": "`residual`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "title": "Corn Yield Residuals (Sorted)",
+                "showTitle": true
+              },
+              "rowsPerPage": 25,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "state",
+                    "displayName": "State"
+                  },
+                  {
+                    "fieldName": "year",
+                    "displayName": "Year"
+                  },
+                  {
+                    "fieldName": "avg_yield",
+                    "displayName": "Actual Yield"
+                  },
+                  {
+                    "fieldName": "predicted_yield",
+                    "displayName": "Predicted Yield"
+                  },
+                  {
+                    "fieldName": "residual",
+                    "displayName": "Residual"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 22,
+            "width": 12,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    },
+    {
+      "name": "07a85b7c",
+      "displayName": "Global Filters",
+      "layout": [
+        {
+          "widget": {
+            "name": "51da61d0",
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-single-select",
+              "encodings": {},
+              "frame": {
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "corn_anomaly_year_filter",
+            "queries": [
+              {
+                "name": "dashboards/01f114f0d010104e8810a039b546b74f/datasets/01f11506fc371a5e833521be864bfab1_year",
+                "query": {
+                  "datasetName": "cea48748",
+                  "fields": [
+                    {
+                      "name": "year",
+                      "expression": "`year`"
+                    },
+                    {
+                      "name": "year_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "title": "Corn Anomaly Year",
+                "showTitle": true
+              },
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "year",
+                    "queryName": "dashboards/01f114f0d010104e8810a039b546b74f/datasets/01f11506fc371a5e833521be864bfab1_year"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 2,
+            "width": 2,
+            "height": 2
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_GLOBAL_FILTERS",
+      "layoutVersion": "GRID_V1"
+    },
+    {
+      "name": "15a5bcd0",
+      "displayName": "Corn Yield",
+      "layout": [
+        {
+          "widget": {
+            "name": "2f32380a",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "1d0feadc",
+                  "fields": [
+                    {
+                      "name": "state",
+                      "expression": "`state`"
+                    },
+                    {
+                      "name": "avg_temp_max",
+                      "expression": "`avg_temp_max`"
+                    },
+                    {
+                      "name": "avg_yield",
+                      "expression": "`avg_yield`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "title": "Corn Yield vs Avg Temperature (Bar)",
+                "showTitle": true
+              },
+              "widgetType": "scatter",
+              "encodings": {
+                "x": {
+                  "fieldName": "avg_temp_max",
+                  "displayName": "Max Temperature",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg_yield",
+                  "displayName": "Average Yield",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "state",
+                  "legend": {
+                    "position": "right"
+                  },
+                  "displayName": "State",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 11,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "corn_anomaly_summary_table",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "4176091b",
+                  "fields": [
+                    {
+                      "name": "state",
+                      "expression": "`state`"
+                    },
+                    {
+                      "name": "year",
+                      "expression": "`year`"
+                    },
+                    {
+                      "name": "avg_yield",
+                      "expression": "`avg_yield`"
+                    },
+                    {
+                      "name": "predicted_yield",
+                      "expression": "`predicted_yield`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "title": "Corn Yield Anomaly Summary Table",
+                "showTitle": true
+              },
+              "rowsPerPage": 25,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "state",
+                    "displayName": "State"
+                  },
+                  {
+                    "fieldName": "year",
+                    "displayName": "Year"
+                  },
+                  {
+                    "fieldName": "avg_yield",
+                    "displayName": "Average Yield"
+                  },
+                  {
+                    "fieldName": "predicted_yield",
+                    "displayName": "Predicted Yield"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 6,
+            "width": 12,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
